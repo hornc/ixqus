@@ -1,0 +1,62 @@
+# PRODUCTIONS
+ΙαΙσ011 ΧχβΘΘ
+ΙβΙσ10 ΧχγΘΘ
+ΙγΙσ101 ΧχαΘΘ
+
+# DATA
+ΙΣ1Θ
+
+Ιϲ  # set up writes to data
+  Ι1 ΙΣ1ΘΘ
+  Ι0 ΙΣ0ΘΘ
+Θ
+
+ΙϹ   # setup first data actions
+ Ι1        # def one
+  Χχ       # break self
+  Ι0ΧχΘ 0  # break both
+  Χχ
+  ΙςσΧχΘ   # set append
+  ΙΣΧχΘ Σ  # break data
+  ϲ
+ Θ
+ Ι0        # def zero
+  Χχ       # break self
+  Ι1ΧχΘ 1  # break both
+  Χχ
+  ς        # move to next production without changing anything and remove sigma
+  ΙΣΧχΘ Σ  # break data
+  ϲ
+ Θ
+Θ
+
+αϹ  # init current production and data actions
+
+debug
+ΣςϹ
+debug
+
+ΣςϹ
+debug
+
+ΣςϹ
+debug
+
+ΣςϹ
+debug
+
+ΣςϹ
+debug
+
+ΣςϹ
+debug
+
+ΣςϹ
+debug
+
+ΣςϹ
+debug
+
+ΣςϹ
+debug
+
