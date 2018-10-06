@@ -55,33 +55,28 @@ New statements are inscribed on ostraka, assigned a symbol (sigma) and placed in
 
 ### Examples
 
-
+"Hello, World!" (direct port from the Deadfish x version)
 ```ΙΧΘΥΣ
 ιιθιιιιθιιιιιιιιΥΧιιθιιιιιιθιΥιιιιιιιΥΥιιιΥΧιιιιιιιθχχχχχΥΧιιιιιιθχχχχΥΧιιιθιιθχχΥχχχχχχχχΥιιιΥχχχχχχΥχχχχχχχχΥΧιιιιιιθχχχΥ
 ```
-"Hello, World!" (direct port from the Deadfish x version)
 **OUTPUT:** `Hello, world!`
 
-
+Alphabet (Latin), again ported, but compressed, from Deadfish x example:
 ```ΙΧΘΥΣ
 ΙΣιΥΘιιθιιιιθΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣ
 ```
-Alphabet (Latin), again ported, but compressed, from Deadfish x example:
 **OUTPUT:** `ABCDEFGHIJKLMNOPQRSTUVWXYZ`
 
-
+With its Unicode support, ΙΧΘΥΣ can just as easily display the Greek alphabet
 ```ΙΧΘΥΣ
 XΙΣιΥΘιιιιιθιιιιιθιιιιιιιιιιιιΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣιΣΣΣΣΣΣΣ
-
 ```
-With its Unicode support, ΙΧΘΥΣ can just as easily display the Greek alphabet
 **OUTPUT:** `ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ`
 
-
+And is not just limited to Greek, but can output from any Unicode block, for example, in Phoenician:
 ```ΙΧΘΥΣ
 ΧΙΣιΥΘΙσχχχχχχχχχχχχχχχχχχχχχχχχχχχχΘιιιθιιιιιιιιθσθχχσσσσσσσσσσΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣΣ
 ```
-And is not limted to just Greek, but can output from any Unicode block, for example, in Phoenician:
 **OUTPUT:** `𐤀𐤁𐤂𐤃𐤄𐤅𐤆𐤇𐤈𐤉𐤊𐤋𐤌𐤍𐤎𐤏𐤐𐤑𐤒𐤓𐤔𐤕`
 
 #### Non-Latin charset "Hello World"s
@@ -95,7 +90,6 @@ A more representative example for ΙΧΘΥΣ is to print 'Hello World' in Classi
 Since ΙΧΘΥΣ is a superset of Deadfish, it is relatively trivial to create a compliant Deadfish interpreter, e.g. for standard "idso" version:
 ```ΙΧΘΥΣ
 ΙiιΘΙdχΘΙsθΘΙoυΘΧ
-
 ```
 
 ### File Extension
@@ -123,7 +117,7 @@ This does not mean lines _have_ to end in a sigma, simply that if they do, they 
 **invalid**
 ```ΙΧΘΥΣ
 >> ΙσιιιυΘσ
-SYNTAX ERROR
+?SYNTAX ERROR
 ```
 
 ### The Non-Aristotelian Syllogism
