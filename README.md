@@ -7,7 +7,7 @@
 * γάρος (aged, fermented fish)
 * ἰχθῦς σηπτός (rotten fish)
 
-ΙΧΘΥΣ means 'fish' in Classical Greek. It is a derivative of firefly431's [Deadfish x](https://esolangs.org/wiki/Deadfish_x), and therefore a superset of Jonathan Todd Skinner's original [Deadfish](https://esolangs.org/wiki/Deadfish).
+[ΙΧΘΥΣ](https://esolangs.org/wiki/%CE%99%CE%A7%CE%98%CE%A5%CE%A3) means 'fish' in Classical Greek. It is a derivative of firefly431's [Deadfish x](https://esolangs.org/wiki/Deadfish_x), and therefore a superset of Jonathan Todd Skinner's original [Deadfish](https://esolangs.org/wiki/Deadfish).
 
 ### Motivation
 I wanted to experiment with creating a reduced instruction set esoteric (+joke) programming language that made use of archaic languages and alphabets (yay Unicode!). Deadfish seemed an appealing base, and Deadfish x seemed like a powerful extension by adding 'functions', even though I don't believe they are functions in a strict sense.
