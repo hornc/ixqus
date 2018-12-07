@@ -6,8 +6,7 @@
 
 # Based on Deadfish x by firefly431, https://esolangs.org/wiki/Deadfish_x
 # and the orginal Deadfish by Jonathan Todd Skinner, https://esolangs.org/wiki/Deadfish
-import argparse
-import re
+import argparse, re
 
 # set up symbols
 TRANSLITER = 'ixquIXQUsS'  # transliterated
@@ -24,6 +23,7 @@ FIN = LANG[6] # statement def close
 UNI = LANG[7]
 
 MAX_UNI = 0x10FFFF
+ΠΙΘΟΣ = u'\U000106AF'
 
 operations = { 
    INC: lambda x: x + 1,
@@ -36,7 +36,7 @@ operations = {
    FIN: lambda x=0: globals().update(ostr_write = ostr_write[:-1]),
 }
 
-sys_info = lambda: u'\U000106AF ' + '\n'.join(str(d) for d in (ostraka, ostr_read, '⎯'*0x10, ostr_write, x))
+sys_info = lambda: '\n'.join(str(d) for d in (ΠΙΘΟΣ, '\n'.join([' [%s] {%s}' % (k,v) for k,v in ostraka.items()]), ΠΙΘΟΣ, '⇦ %s'%ostr_read, '━'*16, '⇨ %s'%ostr_write, '𐘾 %d\n'%x))
 
 ## Set up global env
 # accumulator
