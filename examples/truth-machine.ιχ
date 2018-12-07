@@ -1,0 +1,19 @@
+# More interesting truth-machine
+# tests the value of the accumulator
+# by triggering Deadfish overflow to destroy
+# a statement definition to pick an outcome
+# Still triggers recursion limits
+# Usage:
+# zero:
+#   ixqus.py examples/truth-machine.ιχ
+# one:
+#   ixqus.py <(echo ι) examples/truth-machine.ιχ | head
+# Because these "comments" are parsed as code, we need one more χ
+# to bring the accumulator back to the intended 0 or 1
+
+ΙαΑχΧΘ        # define <alpha>: Test for False, break self if acc==0, and call to <ALPHA>=Truth outcome
+ΙβΧιιθιιιθχΘ  # define <beta>:  False action
+α             # Tests <alpha> before <ALPHA> is defined. If accumulator is 0 <alpha> breaks and <ALPHA> will never execute
+ΙΑΧιιθιιιθΥΑΘ # define <ALPHA>: True action (recursive)
+αβ            # Always execute <beta> and <alpha>, if acc==0 <alpha> will not be defined at this point so is either NOOP or Truth result
+Υ             # If <ALPHA> recursion not executed, output the False result

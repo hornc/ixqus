@@ -1,0 +1,12 @@
+# Trivial (cheating?) Truth-machine
+# Does not test conditionals properly, 
+# simply runs one or two defined statements '0' or '1'
+# based on character symbols rather than values.
+# 1 will hit the interpreter's Python recursion limit
+# Usage:
+#   ixqus.py examples/truth-machine-trivial.ιχ <(echo 0)
+#   ixqus.py examples/truth-machine-trivial.ιχ <(echo 1) | head
+
+ιιθιιιθ
+Ι0χΥΘ
+Ι1Υ1Θ
