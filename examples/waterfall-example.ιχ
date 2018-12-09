@@ -5,7 +5,7 @@
 # the appropriate 'action' and corresponding inverse 'anti-actions', and defining
 # the appropriate number of symbols.
 # Strict ixqus requires that all symbols be some form of sigma, that is ignored here
-# to assit readability of the (hopeful!) Turing completeness proof.
+# to assit readability of the Turing completeness proof.
 
 #   waterclock registers 1,2,3
 # anti-action generators Α,Β,Γ
@@ -20,7 +20,7 @@
 #    * then attempts to perform two 'accumulator == 0' tests and anti-actions, 
 #      which is the inverse its Waterclock Model zero-trigger action,
 #      This attempt will succeed at least once every cycle, normally twice.
-#      It occurs _only once_ when the clock reaches zero. The definition is destoryied on the first test, 
+#      It occurs _only once_ when the clock reaches zero. The definition is destroyed on the first test, 
 #      so the second call is undefined, therefore NOOP.
 #  I believe this is the most efficient way for ixqus to perform the tests, because the only conditional action that can occur
 #  is for a statement definition to destroy itself during execution by triggering the Deadfish overflow condition (a==-1 OR a==256)
