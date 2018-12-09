@@ -1,0 +1,71 @@
+# Implements a single Waterfall Model program in iqxus
+# http://nethack4.org/esolangs/waterfall/
+#
+# Any Waterfall model code should be transpilable to this format by forming
+# the appropriate 'action' and corresponding inverse 'anti-actions', and defining
+# the appropriate number of symbols.
+# Strict ixqus requires that all symbols be some form of sigma, that is ignored here
+# to assit readability of the (hopeful!) Turing completeness proof.
+
+#   waterclock registers 1,2,3
+# anti-action generators Α,Β,Γ
+#           anti-actions α,β,γ
+#                actions 𝜶,𝜷,𝜸
+#
+# Every cycle:
+#  * all clocks are decremented by one
+#  * each clock in turn copies its current level to the accumulator for testing
+#    * then performs two actions, always, modifying itself and every other clock
+#      by twice the amount of the Waterclock model zero-trigger values
+#    * then attempts to perform two 'accumulator == 0' tests and anti-actions, 
+#      which is the inverse its Waterclock Model zero-trigger action,
+#      This attempt will succeed at least once every cycle, normally twice.
+#      It occurs _only once_ when the clock reaches zero. The definition is destoryied on the first test, 
+#      so the second call is undefined, therefore NOOP.
+#  I believe this is the most efficient way for ixqus to perform the tests, because the only conditional action that can occur
+#  is for a statement definition to destroy itself during execution by triggering the Deadfish overflow condition (a==-1 OR a==256)
+
+# Each waterclock needs an 'anti-action generator' to redefine the anti-action which breaks every cycle
+# triggered by the Deadfish overflow, which is the test mechanism
+ΙΑΙαχΙ1χχχΘΙ3χχχχχχΘΘΘΑ
+ΙΒΙβχΙ1χχχχχχΘΙ2χχχΘΘΘΒ
+ΙΓΙγχΙ2χχχχχχχχχΘΙ3χχχΘΘΘΓ
+
+# each waterclock has an action statement which persists
+# this is the Waterfall matrix [[1, 3, 0, 6], [2, 6, 3, 0], [3, 0, 9, 3]]
+
+Ι1 ι   ΘΙ𝜶Ι1 ιιι    ΘΙ2           ΘΙ3 ιιιιιι ΘΘ
+Ι2 ιι  ΘΙ𝜷Ι1 ιιιιιι ΘΙ2 ιιι       ΘΙ3        ΘΘ
+Ι3 ιιι ΘΙ𝜸Ι1        ΘΙ2 ιιιιιιιιι ΘΙ3 ιιι    ΘΘ
+
+# This definition block is output only, does not change clock states, simply displays clock values:
+ΙΩ
+  ΧιιθιιθχΥΥ
+  Χυ1υ
+  Χ2υ
+  Χ3υ
+Θ
+
+# Main loop (recursive)
+# decrement each clock
+# Recall each clock value
+# perform two actions
+# test + one anti-action, which will break if clock==0
+# test + one anti-action, if the clock was not 0, otherwise NOOP
+#   if the above is run, it will always break at this point
+# then re-create anti-action statement which broke
+#   either in its first call (clock < 0) or second (clock > 0)
+ΙΣ 
+  Ι1χΘ Ι2χΘ Ι3χΘ
+  Χ 1 𝜶𝜶 α Χ α Α
+  Χ 2 𝜷𝜷 β Χ β Β
+  Χ 3 𝜸𝜸 γ Χ γ Γ
+  ΩΣ
+Θ
+Σ
+
+# Pre-emptive rebuttals to criticisms:
+#   Clocks can't go beyond 255: The accumulator could be set to 257 to provide an unbounded accumulator and clocks, so 256 would be the new zero
+#   Not enough symbols in Unicode to represent large programs: This is a limitation of Unicode. Theoretical versions of Unicode could be created
+#   that have infinite characters and infinite sigmas. In the current standard, combining characters could be used to supply potentiall infinite
+#   composed characters with sigma bases.
