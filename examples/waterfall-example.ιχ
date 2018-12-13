@@ -1,4 +1,4 @@
-# Implements a single Waterfall Model program in iqxus
+# Implements a single Waterfall Model program in ixqus
 # http://nethack4.org/esolangs/waterfall/
 #
 # Any Waterfall model code should be transpilable to this format by forming
@@ -67,5 +67,5 @@
 # Pre-emptive rebuttals to criticisms:
 #   Clocks can't go beyond 255: The accumulator could be set to 257 to provide an unbounded accumulator and clocks, so 256 would be the new zero
 #   Not enough symbols in Unicode to represent large programs: This is a limitation of Unicode. Theoretical versions of Unicode could be created
-#   that have infinite characters and infinite sigmas. In the current standard, combining characters could be used to supply potentiall infinite
+#   that have infinite characters and infinite sigmas. In the current standard, combining characters could be used to supply potential infinite
 #   composed characters with sigma bases.
