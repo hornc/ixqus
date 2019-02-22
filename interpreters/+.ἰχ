@@ -1,0 +1,13 @@
+# Interpreter for joke esolang +
+# https://esolangs.org/wiki/+
+#  in fake-fungoid ASCII art format
+#  use 'debug' to check accumulator value.
+
+      ΙΧΘΥΣ
+
+        ΣΥΘΧΙ+ιΘ
+           Χ  ΙχΘΥΣ
+          Θ    Ιθ     Θ
+         Υ      Ιυ      Θ
+        Σ        Ις      Θ
+                    ἰχθυς
